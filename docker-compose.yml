@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  research:
+    build: research
+    volumes:
+      - ./research:/mnt/code
+      - ./data:/mnt/data
+    environment:
+      TIMEZONE: America/Sao_Paulo
+    ports:
+      - 8888:8888
+    image: nlp-exploratory
+    container_name: nlp-exploratory-default
